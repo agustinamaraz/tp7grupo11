@@ -1,7 +1,6 @@
 package ar.edu.unju.escmi.poo.collections;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
