@@ -13,6 +13,7 @@ public class Detalle {
 		super();
 		this.cantidad = cantidad;
 		this.producto = producto;
+		calcularImporte();
 	}
 
 	public int getCantidad() {

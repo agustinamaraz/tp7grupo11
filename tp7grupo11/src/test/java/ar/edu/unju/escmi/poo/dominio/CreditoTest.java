@@ -33,10 +33,19 @@ class CreditoTest {
 	void tearDown() throws Exception {
 	}
 	
-	//Test que permita validar que la lista de cuotas que se generan no es un valor null
 	@Test
 	void testGenerarCuotas() {
 		assertEquals(30,credito.getCuotas().size());
+	}
+	//Test que valide que la cantidad de cuotas generadas no supere la cantidad de cuotas permitidas
+	@Test
+	void testGenerarCuotas2() {
+		assertTrue(credito.getCuotas().size()<31);
+	}
+	//Test que permita validar que la lista de cuotas que se generan no es un valor null
+	@Test
+	void testGenerarCuotas3() {
+		assertNotNull(30,credito.getCuotas().toString());
 	}
 
 }
