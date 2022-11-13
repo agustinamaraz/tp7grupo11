@@ -52,10 +52,6 @@ public abstract class CollectionStock {
 		CollectionStock.stocks = stocks;
 	}
 	
-	/*public List<Stock> mostrarStock(){
-		return arrayList<Stock>();
-	}*/
-	
 	public static boolean decrementarStockProducto(long codigo, int cantidad) {
 		boolean decrementoPosible=false;
 		for(int i=0;i<stocks.size();i++) {
