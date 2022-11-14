@@ -19,7 +19,9 @@ public abstract class CollectionFactura {
 	public static List<Factura> getFacturas() {
 		if(facturas==null) {
 			facturas = new ArrayList<Factura>();
-			/*List<Detalle> detalles = new ArrayList<Detalle>();
+			/*
+			 * DESCOMENTAR PARA LA PRUEBA UNITARIA
+			 * List<Detalle> detalles = new ArrayList<Detalle>();
 			detalles.add(new Detalle(1,CollectionProducto.buscarProductoPorCodigo(2),1*CollectionProducto.buscarProductoPorCodigo(2).getPrecioUnitario()));
 			facturas.add(new Factura(LocalDate.now(),1,CollectionCliente.buscarCliente(44949820),detalles));
 			detalles.clear();
