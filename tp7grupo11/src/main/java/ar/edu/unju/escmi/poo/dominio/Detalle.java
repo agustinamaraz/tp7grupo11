@@ -9,11 +9,11 @@ public class Detalle {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Detalle(int cantidad, Producto producto) {
+	public Detalle(int cantidad, Producto producto, double importe) {
 		super();
 		this.cantidad = cantidad;
 		this.producto = producto;
-		calcularImporte();
+		this.importe = importe;
 	}
 
 	public int getCantidad() {
@@ -40,8 +40,9 @@ public class Detalle {
 		this.producto = producto;
 	}
 	
-	public void calcularImporte() {
+	public double calcularImporte() {
 		this.importe = (this.cantidad*(this.producto.getPrecioUnitario()));
+		return this.importe;
 	}
 
 	@Override

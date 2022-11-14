@@ -14,10 +14,10 @@ public abstract class CollectionCredito {
 		if(creditos==null) {
 			creditos = new ArrayList<Credito>();
 			
-			creditos.add(new Credito(CollectionFactura.getFacturas().get(0),CollectionTarjetaCredito.getTarjetas().get(0)));
+			/*creditos.add(new Credito(CollectionFactura.getFacturas().get(0),CollectionTarjetaCredito.getTarjetas().get(0)));
 			creditos.add(new Credito(CollectionFactura.getFacturas().get(1),CollectionTarjetaCredito.getTarjetas().get(1)));
 			creditos.add(new Credito(CollectionFactura.getFacturas().get(2),CollectionTarjetaCredito.getTarjetas().get(2)));
-			creditos.add(new Credito(CollectionFactura.getFacturas().get(3),CollectionTarjetaCredito.getTarjetas().get(3)));
+			creditos.add(new Credito(CollectionFactura.getFacturas().get(3),CollectionTarjetaCredito.getTarjetas().get(3)));*/
 			
 		}
 		return creditos;

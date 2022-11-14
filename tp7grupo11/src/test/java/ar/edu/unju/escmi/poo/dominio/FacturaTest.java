@@ -39,8 +39,8 @@ class FacturaTest {
 	void testCalcularTotal() {
 		
 		cliente = CollectionCliente.buscarCliente(44949820);
-		detalles.add(new Detalle(1,CollectionProducto.buscarProductoPorCodigo(25)));
-		detalles.add(new Detalle(1,CollectionProducto.buscarProductoPorCodigo(9)));
+		detalles.add(new Detalle(1,CollectionProducto.buscarProductoPorCodigo(25),1*CollectionProducto.buscarProductoPorCodigo(25).getPrecioUnitario()));
+		detalles.add(new Detalle(1,CollectionProducto.buscarProductoPorCodigo(9),1*CollectionProducto.buscarProductoPorCodigo(9).getPrecioUnitario()));
 		factura.setCliente(cliente);
 		//System.out.println(cliente); para controlar
 		factura.setDetalles(detalles);

@@ -65,4 +65,12 @@ public abstract class CollectionStock {
 		return decrementoPosible;
 	}
 	
+	public static void mostrarStocksAhora30(){
+		for(Stock s:stocks) {
+			if(s.getProducto().getOrigen().equals("ARGENTINA")) {
+				System.out.println(s);
+			}
+		}
+	}
+	
 }

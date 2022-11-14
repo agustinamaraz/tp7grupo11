@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import ar.edu.unju.escmi.poo.dominio.Cliente;
 import ar.edu.unju.escmi.poo.dominio.TarjetaCredito;
 
 public abstract class CollectionTarjetaCredito {
@@ -27,4 +28,36 @@ public abstract class CollectionTarjetaCredito {
 		CollectionTarjetaCredito.tarjetas = tarjetas;
 	}
 	
+	public static TarjetaCredito buscarTarjetaPorNroTarjeta(long nro) {
+		TarjetaCredito tar=new TarjetaCredito();
+		for(TarjetaCredito t: tarjetas) {
+			if(t.getNumero() == nro) {
+				tar=t;
+			}
+		}
+		return tar;
+	}
+	
+	public static TarjetaCredito buscarTarjeta(Cliente cliente) {
+		TarjetaCredito encontrada=null;
+		for(TarjetaCredito t: tarjetas) {
+			if(t.getCliente().equals(cliente)) {
+				encontrada = t;
+			}
+		}
+		return encontrada;
+	}
+	
+	public static boolean decrementarLimiteCompra(long numero, double monto) {
+		boolean decrementoPosible=false;
+		for(int i=0;i<tarjetas.size();i++) {
+			if(tarjetas.get(i).getNumero() == numero) {
+				if(tarjetas.get(i).getLimiteCompra()>=monto && tarjetas.get(i).getLimiteCompra()-monto >= 0) {
+					tarjetas.get(i).setLimiteCompra(tarjetas.get(i).getLimiteCompra()-monto);
+					decrementoPosible=true;
+				}
+			}
+		}
+		return decrementoPosible;
+	}
 }

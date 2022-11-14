@@ -54,6 +54,10 @@ public class Factura {
 		this.detalles = detalles;
 	}
 	
+	public void agregarDetalle(Detalle nuevoDetalle) {
+		detalles.add(nuevoDetalle);
+	}
+	
 	public double calcularTotal() {
 		double total=0;
 		
